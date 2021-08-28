@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA8OyIba1uTUSwsPwkn5VPJwAAAAACAAAAAAAQZgAAAAEAACAAAAB51WXFuyqVDPJZMGvBZVuPFP/548QOgrSzhAdfb//6hAAAAAAOgAAAAAIAACAAAADmMdr2Z0TD4SmVe53otYreC+uYBkqGB2mzTH32yO4maSAAAAB51p4hKEifJZKLuVB9W3CIEWehf5ANH85RLCQ2sT1xE0AAAAD1n1XxZs0uDhyWI7WKRv62XUk4qQyxB6h2CjbeZyx0bEl/H4bYgpDCfITXja5Agn3zwzQtKf5mH9Yg4lqX6/gP</EncryptedPassword>
+    <_PublishTargetUrl>ftp://youssefghonem.somee.com/www.youssefghonem.somee.com/ftp://192.52.242.121/www.youssefghonem.somee.com</_PublishTargetUrl>
+    <History>False|2021-08-28T13:13:25.5124276Z;False|2021-08-28T14:42:30.8611268+02:00;False|2021-08-28T13:32:43.5038501+02:00;False|2021-08-28T13:26:51.1706546+02:00;False|2021-08-28T13:24:01.4356543+02:00;False|2021-08-28T13:23:43.3372376+02:00;False|2021-08-28T13:22:21.8548551+02:00;False|2021-08-28T13:21:44.7731983+02:00;False|2021-08-28T13:18:58.9166989+02:00;False|2021-08-28T13:18:05.8612172+02:00;False|2021-08-28T13:17:28.5184331+02:00;False|2021-08-28T13:09:28.5465238+02:00;False|2021-08-28T12:59:43.7075748+02:00;False|2021-08-28T12:57:46.0423138+02:00;False|2021-08-28T12:57:18.1282992+02:00;False|2021-08-28T12:50:01.7743427+02:00;False|2021-08-28T12:03:47.7830573+02:00;</History>
+  </PropertyGroup>
+</Project>

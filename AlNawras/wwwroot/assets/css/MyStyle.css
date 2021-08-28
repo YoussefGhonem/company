@@ -1,0 +1,28 @@
+﻿.bg-white #button-addon1 {
+    color: #ffc371;
+}
+
+.bg-white  i {
+    color: #ffc371;
+}
+
+.bg-white  .form-control::placeholder {
+    font-size: 0.95rem;
+    color: #aaa;
+    font-style: italic;
+}
+
+.bg-white .form-control.shadow-0:focus {
+    box-shadow: none;
+}footer {
+
+    padding: 10px;
+    box-shadow: 5px 10px 18px #888888;
+}
+.text-muted:hover {
+ 
+    color: #fc6060 !important;
+}
+.bg-white i {
+    color: #fc6060 !important;
+}

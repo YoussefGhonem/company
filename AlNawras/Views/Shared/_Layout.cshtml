@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AlNawras</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+    <link href="~/assets/css/MyStyle.css" rel="stylesheet" />
+    <link href="~/assets/styles/main.css" rel="stylesheet" media="screen, print" type="text/css">
+    <link href="~/font-awesome/css/all.css" rel="stylesheet" />
+    <link href="~/assets/style.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/assets/util.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/main.css">
+
+
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- /Preloader -->
+    <!-- Top Search Form Area -->
+    <div class="top-search-area">
+        <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <!-- Close -->
+                        <button type="button" class="btn close-btn" data-dismiss="modal"><i class="ti-close"></i></button>
+                        <!-- Form -->
+                        <form action="index.html" method="post">
+                            <input type="search" name="top-search-bar" class="form-control" placeholder="Search and hit enter...">
+                            <button type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Area Start -->
+    <header class="header-area">
+        <!-- Main Header Start -->
+        <div class="main-header-area">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Classy Menu -->
+                    <nav class="classy-navbar justify-content-between" id="alimeNav">
+
+                        <!-- Logo -->
+                        <a style="color:aliceblue; font-size:19px" class="nav-brand" asp-controller="Home" asp-action="About">
+                            @*<img style="width:30px" src="~/assets/img/logo.PNG" alt="">*@
+                            <span class="text3">Al Nawras</span>
+                            <br />
+                            <span class="text2">SAFETY AND SECURITY SYSTEMS </span>
+                        </a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+                            <!-- Menu Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul id="nav">
+                                    <li class="nav-item @(Context.Request.Path.Value.ToLower() == "/home/index" || Context.Request.Path.Value.ToLower() ==  "/" ? "active" : "" )"><a asp-controller="Home" asp-action="Index">Home</a></li>
+                                    <li class="nav-item @(Context.Request.Path.Value.ToLower() == "/home/about" ? "active" : "" )"><a asp-controller="Home" asp-action="About">About-Us</a></li>
+                                    <li class="nav-item @(Context.Request.Path.Value.ToLower() == "/projects/index" || Context.Request.Path.Value.ToLower() ==  "/projects"  ? "active" : "")"><a asp-controller="Projects" asp-action="Index">Projects</a></li>
+                                    <li class="nav-item @(Context.Request.Path.Value.ToLower() == "/products/index" || Context.Request.Path.Value.ToLower() ==  "/products"  ? "active" : "")"><a asp-controller="Products" asp-action="Index">Key-Products</a></li>
+                                    <li class="nav-item @(Context.Request.Path.Value.ToLower() == "/home/markets" ? "active" : "")"><a asp-controller="Home" asp-action="Markets">Markets</a></li>
+                                    <li>
+                                        <a href="#">News/Events</a>
+                                        <ul class="dropdown">
+                                            <li class="nav-item @(Context.Request.Path.Value.ToLower() == "/home/events" ? "active" : "")"><a asp-controller="Home" asp-action="events">- News</a></li>
+                                            <li><a href="#">- Events</a></li>
+                                            <li><a href="#">- Gallery</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item @(Context.Request.Path.Value.ToLower() == "/home/contact" ? "active" : "")"><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+                                </ul>
+                                @*<div class="search-icon" data-toggle="modal" data-target="#searchModal"><i class="ti-search"></i></div>*@
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
+
+    @RenderBody()
+
+    <!-- **** All JS Files ***** -->
+    <!-- jQuery 2.2.4 -->
+    <script src="~/assets/js/jquery.min.js"></script>
+    <!-- Popper -->
+    <script src="~/assets/js/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    <!-- All Plugins -->
+    <script src="~/assets/js/alime.bundle.js"></script>
+    <!-- Active -->
+
+    <script src="~/assets/js/default-assets/active.js"></script>
+    <script asp-append-version="true">
+
+
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <!-- For demo purpose -->
+    <!-- Footer -->
+    <a href="whatsapp://send?phone=##"><svg viewBox="0 0 32 32" class="whatsapp-ico"><path d=" M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z" fill-rule="evenodd"></path></svg></a>
+    @*<a href="whatsapp://send?phone=##" style="margin-right:5% !important">
+
+            <div viewBox="0 0 32 32" class="facebook-ico"
+                 style="margin-right:9% !important;margin-bottom:1%">
+                <i style="
+        font-family: 'Font Awesome 5 Brands';
+
+            font-size: 30px;
+            padding-top: 9px;
+            padding-left: 8px;
+            color: white;" class="fa fa-facebook-f"></i>
+            </div>
+
+        </a>*@
+    @*style=" background-repeat: no-repeat; background-position: center center; background-size: cover; background-attachment: fixed; background-image: url('/assets/img/image1.jpg') !important; "*@
+
+    <footer class="bg-white"
+            
+             style=" border-radius: 12px;" >
+        <div class="container py-5">
+            <div class="row py-4">
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <img src="img/logo.png" alt="" width="180" class="mb-3">
+                    <h6 class="text-uppercase font-weight-bold mb-4">About Alnawras</h6>
+                    <p class="font-italic text-muted">Al Nawras Safety and Security Systems is a leading Fire Protection company, Al Nawras is offering a “one stop shop” for client’s needs in the area of Fire Protection systems & integrated solutions.</p>
+
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h6 class="text-uppercase font-weight-bold mb-4">Latest News</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="#" class="text-muted">The launch of ALNWRAS</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0" style="margin-left:3%">
+                    <h6 class="text-uppercase font-weight-bold mb-4">Our Services</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="#" class="text-muted">Maintenance Contracts</a></li>
+                        <li class="mb-2"><a style="cursor:pointer" data-toggle="modal" data-target="#exampleModalCenter1" class="text-muted">Design and Consultancy Team</a></li>
+                        <li class="mb-2"><a style="cursor:pointer" data-toggle="modal" data-target="#exampleModalCenter2" class="text-muted">Installation Team </a></li>
+                        <li class="mb-2"><a style="cursor:pointer" data-toggle="modal" data-target="#exampleModalCenter3" class="text-muted">Customer Services Team</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" style="margin-left:3%">
+                    <h6 class="text-uppercase font-weight-bold mb-4">Social Media</h6>
+                    <ul class="list-inline mt-4">
+                        <li class="list-inline-item"><a href="#" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="#" target="_blank" title="instagram"><i class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="#" target="_blank" title="pinterest"><i class="fa fa-pinterest"></i></a></li>
+                        <li class="list-inline-item"><a href="#" target="_blank" title="vimeo"><i class="fa fa-vimeo"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- End -->
+    <!-- Button trigger modal -->
+    <!-- Modal -->
+    <div class="modal fade " id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Design and Consultancy Team:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+
+
+
+                        <li>
+                            - Project design including both concept design & detailed shop drawing design.
+                        </li>
+                        <li> - Preparing project drawings, specifications, BOQ and other tender documents.</li>
+                        <li> - Project cost saving analysis (Value engineering)</li>
+                        <li> - Staff training and introducing new products</li>
+
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <img style=" width: 400px!important; height: 300px !important;" 200px"" src="~/assets/img/qw.PNG" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Installation Team:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>
+                            - Fire Alarm, Firefighting & Smoke Management Systems Installation, Testing and Commissioning
+                        </li>
+                        <li>
+                            - After sales maintenance & support team
+                        </li>
+                        <li>
+                            - Existing Project Site surveys
+                        </li>
+                        <li>
+                            - Reporting existing sites conditions and enhancement options
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <img style=" width: 400px!important; height: 300px !important;" 200px"" src="~/assets/img/Capture343.PNG" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade " id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Customer Services Team:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>
+                            - dedicated to provide excellent ongoing support to
+                            our customers and ensuring full satisfaction at all times
+                        </li>
+                       
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <img style=" width: 400px!important; height: 300px !important;" 200px"" src="~/assets/img/CustomerServices.PNG" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

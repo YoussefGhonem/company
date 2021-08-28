@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdhJ4PqMm40mAomshg71I0wAAAAACAAAAAAAQZgAAAAEAACAAAACwgLAJGErQCWkk2/VNvDabOzA5sbCJgguU7HpoyZkHxAAAAAAOgAAAAAIAACAAAABCYQIkLuIQpGYI04D4uFJmO2ok6xpCXep9Z8lwl728LiAAAAA515Fg2qyeGudEAeOdWT+ZpMyDh2+oz+3iHPanbZEXLUAAAAA5QiVigHkjKYQYGNwpotRwTh06kZSfya9301NdlCNCi4d6csHbmX4lsPtqhzfmJeJSEpLogjQAD05Zm9MEWESf</EncryptedPassword>
+    <History>True|2021-04-21T21:38:36.1218570Z;True|2021-04-21T23:32:49.3008896+02:00;True|2021-04-15T03:06:16.3373679+02:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="MyConnection">
+      <Value>Data Source=SQL5074.site4now.net%3bInitial Catalog=DB_A72BA9_AlnawresDB%3bUser Id=DB_A72BA9_AlnawresDB_admin%3bPassword=03%40youssef%40YOU%40</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="AlNawras.Data.DataContext">
+      <Value>Data Source=SQL5074.site4now.net%3bInitial Catalog=DB_A72BA9_AlnawresDB%3bUser Id=DB_A72BA9_AlnawresDB_admin%3bPassword=03%40youssef%40YOU%40</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
