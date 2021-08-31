@@ -1,0 +1,8 @@
+yousseffortteck@gmail.com
+03@youssef@YOU
+
+
+server https://yousseffortteck-001-site1.itempurl.com:8172/MsDeploy.axd?
+sit nme yousseffortteck-001-site1
+user name yousseffortteck-001
+distination http://yousseffortteck-001-site1.itempurl.com
